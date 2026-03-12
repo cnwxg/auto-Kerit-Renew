@@ -49,6 +49,7 @@ jobs:
           PYTHONIOENCODING: utf-8
           KERIT_ACCOUNT: ${{ secrets.KERIT_ACCOUNT }}
           HY2_PROXY_URL: ${{ secrets.HY2_PROXY_URL }}
+          SOCKS_PORT: ${{ secrets.SOCKS_PORT || '51080' }}
           TG_BOT: ${{ secrets.TG_BOT }}
         run: |
           xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" python kerit_renew.py
